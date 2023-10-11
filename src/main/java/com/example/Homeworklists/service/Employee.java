@@ -34,6 +34,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "ФИО = " + firstName + lastName;
+        return "ФИО = " + firstName + " " + lastName;
     }
 }

@@ -3,15 +3,18 @@ package com.example.Homeworklists.service;
 import com.example.Homeworklists.exception.EmployeeAlreadyAddedException;
 import com.example.Homeworklists.exception.EmployeeNotFoundException;
 import com.example.Homeworklists.exception.EmployeeStorageIsFullException;
-import org.springframework.stereotype.Service;
 
-@Service
+import java.util.Collection;
+
+
 public interface EmployeeService {
-    public void addEmployee(String firstName, String lastName) throws EmployeeAlreadyAddedException, EmployeeStorageIsFullException;
+    Employee addEmployee(String firstName, String lastName) throws EmployeeAlreadyAddedException, EmployeeStorageIsFullException;
 
-    public void removeEmployee(String firstName, String lastName) throws EmployeeNotFoundException;
+    Employee removeEmployee(String firstName, String lastName) throws EmployeeNotFoundException;
 
-    public void findEmployee(String firstName, String lastName) throws EmployeeNotFoundException;
+    Employee findEmployee(String firstName, String lastName) throws EmployeeNotFoundException;
+
+    Collection<Employee> getAll();
 }
 
 
